@@ -8,8 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
-    name = {{name}}
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="username">
+        <br>
+        <br>
+
+        <input type="password" name="password">
+        <br>
+        <br>
+        <input type="submit" value="savee">
+
+    </form>
 </body>
 </html>
 {% endblock content%}
