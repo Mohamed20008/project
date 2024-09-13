@@ -1,4 +1,17 @@
 from django import forms
-class LoginForms(forms.Form):
-    username = forms.CharField(max_length=50)
-    password = forms.CharField(max_length=50)
+from .models import Login
+"""attributes
+max_length
+label
+initial
+disabled = True
+help_text
+widget
+required
+
+"""
+class LoginForms(forms.ModelForm):
+    class Meta:
+        model = Login
+        # fields = ['username','password']
+        fields = '__all__'
